@@ -116,7 +116,7 @@ var theSecret;
 
 	function KeepSecret(secret) {
 		theSecret = secret;
-	};
+	}
 
 	KeepSecret.prototype = {
 		squeal: function() { 
