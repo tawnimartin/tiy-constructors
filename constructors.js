@@ -166,7 +166,6 @@ function Key() {
 var Safe = (function() {
 var secretArgument;
 var myKey;
-var key;
 
 	function Safe(arg1, keyPassed) {
 		secretArgument = arg1;
@@ -220,6 +219,23 @@ console.assert(safe.unlock(rightKey) === sensitive);
 
 // -- ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ - Your Answer - ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ -- //
 
+function Validator() {
+}
+
+Validator.prototype = {
+email: function(str) { 
+
+	var atSym = str.indexOf("@");
+	var dotCom = str.indexOf(".com");
+
+	if ((atSym !== -1) && (dotCom !== -1)) {
+			return true;
+			} else {
+			return false;
+			}
+	}
+
+};
 
 
 
